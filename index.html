@@ -16,7 +16,7 @@
         }
         
         .gradient-block {
-            background: url('bg.svg') no-repeat center center;
+            background: linear-gradient(135deg, #71a0f3 0%, #2a5298 100%);
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -100,6 +100,7 @@
             color: #FAFAFA;
             font-weight: 200;
             transition: all 0.3s;
+            height: 44px;
         }
         
         .contact-button:hover {
@@ -107,6 +108,7 @@
             transform: translateY(-2px);
             box-shadow: 0 5px 10px rgba(0,0,0,0.1);
             color: #283466;
+            
         }
         
         .contact-button i {
@@ -120,7 +122,36 @@
             padding: 0 20px;
         }
 
-        /* Медиа-запрос для мобильных устройств */
+        .company-info {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #FAFAFA;
+        }
+
+
+
+        @media (max-width: 853px) {
+            .gradient-block {
+                background: #FAFAFA;
+            }
+
+            h1 {
+                color: #283466;
+            }
+
+            h2 {
+                font-size: 20px; /* Уменьшаем размер имени */
+                color: #283466;
+            }
+
+            .position {
+                font-size: 16px; /* Уменьшаем размер должности */
+                color: #283466;
+            }
+
+
+        }
         @media (max-width: 768px) {
 
             .content-wrapper {
@@ -140,16 +171,6 @@
                 display: none;
             }
 
-            h2 {
-                font-size: 20px; /* Уменьшаем размер имени */
-                color: #283466;
-            }
-
-            .position {
-                font-size: 16px; /* Уменьшаем размер должности */
-                color: #283466;
-            }
-
             .contact-buttons {
                 flex-direction: row; /* Кнопки выстраиваются в колонку */
                 gap: 10px; /* Уменьшаем отступ между кнопками */
@@ -159,13 +180,7 @@
             .contact-button {
                 width: 158px; /* Кнопки занимают всю ширину */
                 text-align: center; /* Выравниваем текст по центру */
-            }
-
-            .gradient-block {
-                background: #FAFAFA;
-            }
-
-            
+            }            
         }
 
         @media (max-width: 768px) {
@@ -176,17 +191,34 @@
 
         }
 
+        @media (max-width: 344px) {
+            .contact-button {
+                width: 255px;
+            }
+
+        }
+
+        @media (max-width: 768px) {
+            .contact-button {
+                width: 219px;
+                text-align: left;
+            }
+        }
+
+
+
 
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <img src="logo.svg" alt="Логотип" class="logo">
-        </div>
+        
 
         <div class="gradient-block">
+            <div class="header">
+            <img src="logo.svg" alt="Логотип" class="logo">
+        </div>
             <div class="content-wrapper">
                 <div class="text-content">
                     <h1>Всегда готовы предоставить нужных исполнителей</h1>
@@ -197,26 +229,26 @@
                     </div>
                     
                     <div class="contact-buttons">
-                        <a href="#" class="contact-button">
+                        <a href="add-c.html" class="contact-button">
                             <i class="fas fa-address-card"></i> Добавить контакт
                         </a>
-                        <a href="tel:+79991234567" class="contact-button">
+                        <a href="tel:+79995923952" class="contact-button">
                             <i class="fas fa-phone"></i> Телефон
                         </a>
-                        <a href="https://wa.me/79991234567" class="contact-button">
+                        <a href="https://api.whatsapp.com/send?phone=79161234567&text=Здравствуйте" target="_blank" class="contact-button">
                             <i class="fab fa-whatsapp"></i> Whatsapp
                         </a>
-                        <a href="mailto:info@rabochie-ruki.ru" class="contact-button">
+                        <a href="mailto:info@example.com?subject=Вопрос&body=Здравствуйте" class="contact-button">
                             <i class="fas fa-envelope"></i> E-mail
                         </a>
-                        <a href="#" class="contact-button">
+                        <a href="KP.pdf" download target="_blank" class="contact-button">
                             <i class="fas fa-file-alt"></i> Коммерческое предложение
                         </a>
                         <a href="https://rabochie-ruki.ru" class="contact-button">
                             <i class="fas fa-globe"></i> Сайт
                         </a>
-                        <a href="https://rabochie-ruki.ru" class="contact-button">
-                            <i class="fas fa-globe"></i> Обратная связь
+                        <a href="os.html" class="contact-button">
+                            <img src="sv-e.svg" alt="Лого обратная связь" class="logo" style="height: 18px; margin-right: 8px;"> Обратная связь
                         </a>
                     </div>
                 </div>
@@ -225,7 +257,13 @@
                     <img src="gr-d.jpg" alt="Григорий Давыдов">
                 </div>
             </div>
+
+            <div class="company-info">
+            ООО Рабочие Руки<br>
+            ИНН 2311233918
         </div>
+        </div>
+        
     </div>
 </body>
 </html>
