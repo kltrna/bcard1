@@ -326,7 +326,7 @@ svg {
   }
 
   .contact-button {
-    width: 158px;
+    width: 100%;
     text-align: center;
   }
 
@@ -353,7 +353,7 @@ svg {
 @media (max-width: 375px) {
   .form-group input,
   .form-group textarea {
-    width: 260px;
+    width: 100%;
   }
 }
 
