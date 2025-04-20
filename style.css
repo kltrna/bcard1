@@ -290,6 +290,9 @@ svg {
   .soglasie {
     color: #283466;
   }
+  .form-group{
+    width: 240px;
+  }
 }
 
 @media (max-width: 650px) {
@@ -335,9 +338,11 @@ svg {
     padding: 20px;
   }
 
+
   .form-group input,
   .form-group textarea {
     padding: 10px 12px;
+    width: 100%;
   }
 
   .submit-button {
