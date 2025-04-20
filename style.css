@@ -1,0 +1,359 @@
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: #f5f5f5;
+}
+
+.gradient-block {
+  background: linear-gradient(135deg, #71a0f3 0%, #2a5298 100%);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header img {
+  width: 120px;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex: 1;
+}
+
+.text-content {
+  flex: 1;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 32px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.position {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: auto;
+  padding-top: 60px;
+
+  justify-content: center; /* Выравнивание по центру по горизонтали */
+  align-items: center;
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 25px;
+  background-color: #283466;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fafafa;
+  font-weight: 200;
+  transition: all 0.3s;
+  height: 44px;
+}
+
+.contact-button:hover {
+  background-color: #fafafa;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #283466;
+}
+
+.contact-button i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+svg {
+  margin-right: 8px;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон */
+  padding: 30px;
+  border-radius: 12px;
+  backdrop-filter: blur(5px); /* Эффект размытия фона */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Тонкая светлая граница */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+/* Основные стили формы */
+.form-columns {
+  display: flex;
+  justify-content: center; /* Выравнивание по центру */
+  gap: 40px;
+  max-width: 600px; /* Ограничение ширины формы */
+  margin: 0 auto; /* Центрирование контейнера */
+}
+
+.form-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Выравнивание элементов по левому краю */
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%; /* Полная ширина внутри колонки */
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Светлая граница */
+  border-radius: 8px;
+  background-color: transparent; /* Прозрачный фон */
+  color: #fff;
+  font-size: 16px;
+  resize: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input {
+  height: 30px;
+}
+
+.form-group textarea {
+  height: 90px;
+}
+
+.form-group label {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group input:valid + label,
+.form-group textarea:valid + label {
+  border-color: #71a0f3; /* Голубая граница при фокусе */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(113, 160, 243, 0.2);
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  background-color: rgba(42, 82, 152, 0.9);
+  padding: 0 5px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.captcha {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+
+.submit-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #283466;
+  color: #fafafa;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(113, 160, 243, 0.3);
+}
+
+.captcha input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.additional-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.additional-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 25px;
+  background-color: #283466;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fafafa;
+  font-weight: 200;
+  transition: all 0.3s;
+}
+
+.additional-link i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.additional-link:hover {
+  background-color: #fafafa;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #283466;
+}
+
+.checkbox-group {
+  margin-top: 20px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-item input {
+  margin-right: 10px;
+}
+
+.company-info {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #fafafa;
+}
+
+@media (max-width: 853px) {
+  h1 {
+    color: #283466;
+  }
+
+  h2 {
+    font-size: 20px;
+    color: #283466;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .position {
+    font-size: 16px;
+    color: #283466;
+  }
+  .soglasie {
+    color: #283466;
+  }
+}
+
+@media (max-width: 650px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-content {
+    order: 1;
+  }
+
+  .text-content {
+    order: 2;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  .form-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-buttons {
+    flex-direction: row;
+    gap: 10px;
+    padding-top: 20px;
+  }
+
+  .contact-button {
+    width: 158px;
+    text-align: center;
+  }
+
+  .form-column {
+    width: 100%;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 12px;
+  }
+
+  .submit-button {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .form-group input,
+  .form-group textarea {
+    width: 260px;
+  }
+}
+
+.soglasie {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
